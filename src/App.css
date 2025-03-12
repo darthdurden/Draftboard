@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+.App {
+  text-align: center;
+  user-select: none;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+ul {
+  list-style-type: none;
+  text-align: center; 
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  display: inline-block;
+}
+
+.positionChecks li {
+  font-size: 20px;
+  padding-top: 14px;
+  padding-bottom: 15px;
+  width: 10%;
+  cursor: pointer;
+}
+
+.positionChecks li:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.positionChecks li:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.positionChecks li input {
+  cursor: pointer;
+}
+
+.fantasyTeamList li {
+  width: 6.25%;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #666;
+}
+
+.fantasyTeamList li.broke {
+  opacity: 0.5;
+}
+
+.fantasyTeamList {
+  align-items: center;
+  display: flex;
+  color: #000;
+  height: 75px;
+}
+
+.fantasyTeamList li.onTheClock {
+  background: #333;
+  color: #fff;
+}
+
+.fantasyTeamList li .ownerName {
+  display: block;
+}
+
+.fantasyTeamList li .cashRemaining {
+  display: block;
+}
+
+.headshot {
+  border-radius: 50%;
+  background-color: #888;
+  border: 2px solid black;
+  width: 46px;
+  height: 46px;
+  margin-left: 3px;
+}
+
+.teamlogo {
+  filter: drop-shadow(2px 2px 2px black);
+}
+
+.logos {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+}
+
+.positions {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  font-family: Montserrat;
+}
+
+.playerImages {
+  background-color: #666;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.playerNames {
+  text-align: left;
+  font-family: Montserrat;
+  font-size: 14px;
+  align-self: flex-end;
+}
+
+.twoWayStats .playerNames {
+  margin-bottom: 12px;
+}
+
+.firstName {
+  font-size: 14px;
+}
+
+.age {
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.lastName {
+  font-size: 40px;
+  font-weight: 900;
+  margin-top: -6px;
+  margin-bottom: 10px;
+}
+
+.playerCell {
+  user-select: none;
+  cursor: pointer;
+  height: 120px;
+  text-align: center;
+}
+
+.playerCell:hover .inner {
+  opacity: 0.75;
+}
+
+.playerCell .inner {
+  border: 1px solid black;
+  margin: 3px;
+  border-radius: 10px;
+  padding: 3px;
+  display: flex;
+  height: calc(100% - 12px);
+  position: relative;
+}
+
+.ReactVirtualized__Grid .playerCell .inner {
+  margin-top: 0px;
+}
+
+.positionCell {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+  line-height: 24px;
+  margin: 1px;
+}
+
+.positionC {
+  background: #FF9800;
+  color: #000;
+}
+
+.playerCell.positionC {
+  background: linear-gradient(180deg, #FF9800 0%, #FF9800 88%, #000000 88%);
+}
+
+.position1B {
+  background: #4CAF50;
+  color: #000;
+}
+
+.playerCell.position1B {
+  background: linear-gradient(180deg, #4CAF50 0%, #4CAF50 88%, #000000 88%);
+}
+
+.position2B {
+  background: #3F51B5;
+  color: #000;
+}
+
+.playerCell.position2B {
+  background: linear-gradient(180deg, #3F51B5 0%, #3F51B5 88%, #000000 88%);
+}
+
+.positionSS {
+  background: #9C27B0;
+  color: #000;
+}
+
+.playerCell.positionSS {
+  background: linear-gradient(180deg, #9C27B0 0%, #9C27B0 88%, #000000 88%);
+}
+
+.position3B {
+  background: #009688;
+  color: #000;
+}
+
+.playerCell.position3B {
+  background: linear-gradient(180deg, #009688 0%, #009688 88%, #000000 88%);
+}
+
+.positionOF {
+  background: #FFEB3B;
+  color: #000;
+}
+
+.playerCell.positionOF {
+  background: linear-gradient(180deg, #FFEB3B 0%, #FFEB3B 88%, #000000 88%);
+}
+
+.positionRP {
+  background: #795548;
+  color: #000;
+}
+
+.playerCell.positionRP {
+  background: linear-gradient(180deg, #795548 0%, #795548 88%, #000000 88%);
+}
+
+.positionSP {
+  background: #F44336;
+  color: #000;
+}
+
+.playerCell.positionSP {
+  background: linear-gradient(180deg, #F44336 0%, #F44336 88%, #000000 88%);
+}
+
+.positionUT, .positionMulti .positionCell.positionUT {
+  background: gray;
+  color: #000;
+}
+
+.playerCell.positionP {
+  background: linear-gradient(180deg, darkgray 0%, darkgray 88%, #000000 88%);
+}
+
+.positionP, .positionMulti .positionCell.positionP {
+  background: darkgray;
+  color: #000;
+}
+
+.playerCell.positionUT {
+  background: linear-gradient(180deg, gray 0%, gray 88%, #000000 88%);
+}
+
+.positionCell.positionUT, .positionCell.positionP {
+  background: transparent;
+  color: inherit;
+}
+
+.positionMulti {
+  background-color: #333;
+  color: #eee;
+}
+
+.playerCell.positionMulti {
+  background: linear-gradient(180deg, #333 0%, #333 88%, #fff 88%);
+}
+
+.playerCell.positionMulti.twoWayStats {
+  background: linear-gradient(180deg, #333 0%, #333 77%, #fff 77%);
+}
+
+.playerCell.positionMulti .hittingStats div,
+.playerCell.positionMulti .pitchingStats div {
+  color: #000;
+}
+
+.statsContainer {
+  position: absolute;
+  font-size: 12px;
+  bottom: -1px;
+  right: 0px;
+  left: 0px;
+}
+
+.pitchingStats div, .hittingStats div {
+  display: inline-block;
+  width: 20%;
+  color: #fff;
+}
+
+.ReactVirtualized__Grid::-webkit-scrollbar {
+  display: none;
+}
+
+.bidderList li {
+  width: calc(25% - 6px);
+  height: 161px;
+  background: gray;
+  border: 1px solid black;
+  margin: 2px;
+  border-radius: 5px;
+}
+
+.bidderList .bidder {
+  height: calc((100vh - 197px)/4);
+  border: 1px solid black;
+  margin: 2px;
+  border-radius: 3px;
+  background: #666;
+  opacity: 0.75;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.bidderList .noBidding .bidder {
+  background: #eee;
+  color: #ddd;
+}
+
+.bidderList .highBidder .bidder {
+  background: #333;
+  color: #fff;
+}
+
+/*.bidderList .bidder:hover, */.bidderList .activeBidder .bidder {
+  opacity: 1.0;
+  font-size: 1.5rem;
+}
+
+.bidderList .bidder:hover {
+  color: #fff;
+}
+
+.bidderList .bidder .ownerName {
+  display: block;
+}
+
+.bidderList .bidder .teamName {
+  display: block;
+}
+
+.bidderList .bidder .cashRemaining, .bidderList .bidder .cashRemainingOriginal {
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.bidderList :not(.highBidder) .bidder .cashRemaining {
+  display: none;
+}
+
+.bidderList .highBidder .cashRemainingOriginal {
+  text-decoration: line-through;
+}
+
+.timer {
+  position: relative;
+  font-size: 64px;
+  line-height: 114px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 3px;
+  background: #000;
+  color: #fff;
+}
+
+.timer.danger {
+  color: #F44336;
+}
+
+.timer.winner {
+  color: #4CAF50;
+}
+
+.currentBid {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 3px;
+  background: #000;
+  color: #fff;
+
+  height: 116px;
+  display: flex;
+  justify-content: center;
+}
+
+.currentBid .teamName {
+  display: block;
+  font-size: 24px;
+}
+
+.currentBid .bid {
+  display: block;
+  font-size: 48px;
+  color: #4CAF50;
+  position: relative;
+}
+
+.currentBid .bid .icons {
+  position: absolute;
+  bottom: 4px;
+  color: white;
+  right: 10px;
+}
+
+.currentBid .bid .iconsLeft {
+  position: absolute;
+  bottom: 4px;
+  color: white;
+  left: 10px;
+}
+
+.timer .icons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #ffffff;
+  display: flex;
+}
+
+.timer .icons button {
+  color: #ffffff;
+}
+
+.currentBid .icons button, .currentBid .iconsLeft button {
+  color: #ffffff;
+}
+
+.currentBid .icons button:disabled, .currentBid .iconsLeft button:disabled {
+  color: #666;
+}
+
+.rosterTable {
+  width: 100%;
+  text-align: center;
+}
+
+.rosterTable tr:nth-child(odd) td{
+  background-color: #ccc;
+}
+.rosterTable table tr:nth-child(even) td{
+  background-color: #fff;
+}
+
+.MuiContainer-root {
+  max-width: inherit !important;
+}
+
+.logo {
+  height: 50px;
+  margin-bottom: -5px;
+}
+
+.settingsBtn, .historyBtn {
+  height: 50px;
+  float: right;
+}
+
+.flexGrid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.searchField {
+  margin-left: 4px !important;
+  margin-right: 4px !important;
+}
+
+.clearBtn {
+  height: 32px;
+}
+
+.playerFilter {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.settingLabel {
+  display: inline-block;
+  line-height: 50px;
+  width: 150px;
+}
+
+.settingsInput {
+  width: 100px;
+}
+
+.select.settingsInput {
+  width: 300px;
+}
+
+.icons div {
+  margin-left: 2px;
+}
