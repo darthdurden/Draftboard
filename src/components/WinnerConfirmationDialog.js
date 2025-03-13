@@ -34,7 +34,7 @@ const WinnerConfirmationDialog = props => {
       >
         <DialogTitle>Confirm Selection</DialogTitle>
         <DialogContent dividers>
-          <PlayerCard player={nomination.player} statsYear={2023} />
+          <PlayerCard player={nomination.player} statsYear={2025} />
           {nomination.bids[nomination.bids.length - 1].team.name}
           ${nomination.bids[nomination.bids.length - 1].bid}
         </DialogContent>

@@ -24,7 +24,7 @@ function App() {
   const [showSettings, setShowSettings] = useState(false);
   const [showHistory, setShowHistory] = useState(false);
   const [removingPick, setRemovingPick] = useState(undefined);
-  const [statsYear, setStatsYear] = useState(2023);
+  const [statsYear, setStatsYear] = useState(2025);
   const [history, setHistory] = useState([]);
 
   useEffect(() => {
@@ -311,9 +311,9 @@ function App() {
           <Grid>
             <span className="settingLabel">Stats:</span>
             <Select className="select settingsInput" value={statsYear} onChange={(e) => { setStatsYear(e.target.value) }}>
-                <MenuItem value={2023}>2023 Projections</MenuItem>
-                <MenuItem value={2022}>2022 Regular Season</MenuItem>
-                <MenuItem value={2021}>2021 Regular Season</MenuItem>
+                <MenuItem value={2025}>2025 Projections</MenuItem>
+                <MenuItem value={2024}>2024 Regular Season</MenuItem>
+                <MenuItem value={2023}>2023 Regular Season</MenuItem>
             </Select>
           </Grid>
         </Grid>
